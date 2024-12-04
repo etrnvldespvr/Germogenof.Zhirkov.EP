@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8bc06014801c402eb228a1779f976116" Name="Diagram1">
+        <EntityTypeShape EntityType="EducationalModel.Cours" Width="1.5" PointX="3" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationalModel.Lecture" Width="1.5" PointX="5.25" PointY="4" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationalModel.Material" Width="1.5" PointX="7.5" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationalModel.Question" Width="1.5" PointX="9.75" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationalModel.Result" Width="1.5" PointX="5.25" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationalModel.Test" Width="1.5" PointX="7.5" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="EducationalModel.User" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <AssociationConnector Association="EducationalModel.FK__Courses__Teacher__4BAC3F29" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationalModel.FK__Lectures__Course__4E88ABD4" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationalModel.FK__Results__CourseI__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationalModel.FK__Materials__Lectu__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationalModel.FK__Tests__LectureID__5165187F" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationalModel.FK__Questions__TestI__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="EducationalModel.FK__Results__UserID__59FA5E80" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,24 @@
+﻿<Window x:Class="Practical.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Practical"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="900">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="5*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#4682B4" Grid.Row="0"></Grid>
+        <Grid Background="#FFFFFF" Grid.Row="1"></Grid>
+        <Grid Background="#4682B4" Grid.Row="2"></Grid>
+        <Image Source="Resources/logoedudemic.png" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10"></Image>
+        <TextBlock Style="{StaticResource OGText}" TextAlignment="Center" FontSize="40" FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center" Text="EDUDEMIC" Foreground="White"></TextBlock>
+        <Button Name="BtnBack" Click="BtnBack_Click" Style="{StaticResource OGButton}" HorizontalAlignment="Right" Margin="10" Content="BACK"></Button>
+
+        <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Name="MainFrame" Grid.Row="1"></Frame>
+    </Grid>
+</Window>
