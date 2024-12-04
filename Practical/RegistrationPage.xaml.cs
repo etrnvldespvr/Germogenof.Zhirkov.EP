@@ -57,7 +57,6 @@ namespace Practical
             try
             {
                 EducationalEntities.GetContext().SaveChanges();
-                MessageBox.Show("Information saved.");
                 Manager.MainFrame.GoBack();
             }
             catch (Exception ex)

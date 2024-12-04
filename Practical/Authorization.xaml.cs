@@ -26,7 +26,7 @@ namespace Practical
         {
             if ((string.IsNullOrEmpty(LoginBox.Text) || string.IsNullOrEmpty(PasswordBox.Password)))
             {
-                MessageBox.Show("Enter data!");
+                ErrorData.Visibility = Visibility.Visible;
                 return;
             }
             using (var db = new EducationalEntities())
