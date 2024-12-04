@@ -25,7 +25,7 @@
                         <Border BorderBrush="Black" BorderThickness="1">
                             <StackPanel Margin="5">
                                 <WrapPanel>
-                                    <TextBlock Text="{Binding Title}" Margin="5" FontSize="18" Style="{StaticResource OGText}"/>
+                                    <TextBlock Text="{Binding Title}" FontWeight="Medium" Margin="5" FontSize="18" Style="{StaticResource OGText}"/>
                                     <TextBlock Text="—" Margin="5" FontSize="18" Style="{StaticResource OGText}"/>
                                     <TextBlock Margin="5" FontSize="18" Style="{StaticResource OGText}">
                                         <TextBlock.Text>

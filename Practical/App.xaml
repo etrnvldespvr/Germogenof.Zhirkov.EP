@@ -4,11 +4,53 @@
              xmlns:local="clr-namespace:Practical"
              StartupUri="MainWindow.xaml">
     <Application.Resources>
+        <SolidColorBrush x:Key="Primary">
+            <SolidColorBrush.Color>
+                <Color A="255" R="70" G="130" B="180"/>
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+        <SolidColorBrush x:Key="Secondary">
+            <SolidColorBrush.Color>
+                <Color A="255" R="255" G="255" B="255"/>
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+        <SolidColorBrush x:Key="Accent">
+            <SolidColorBrush.Color>
+                <Color A="255" R="135" G="206" B="250"/>
+            </SolidColorBrush.Color>
+        </SolidColorBrush>
+
         <Style x:Key="OGText" TargetType="TextBlock">
             <Setter Property="FontFamily" Value="Roboto"/>
             <Setter Property="FontSize" Value="16"/>
             <Setter Property="Foreground" Value="Black"/>
         </Style>
+
+        <Style x:Key="GradeText" TargetType="TextBlock">
+            <Setter Property="FontFamily" Value="Roboto"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="FontWeight" Value="Medium"/>
+            <Setter Property="Foreground" Value="Black"/>
+            <Style.Triggers>
+                <!-- Если Grade == 5 -->
+                <DataTrigger Binding="{Binding Grade}" Value="5">
+                    <Setter Property="Foreground" Value="#2ad48a"/>
+                </DataTrigger>
+                <!-- Если Grade == 4 -->
+                <DataTrigger Binding="{Binding Grade}" Value="4">
+                    <Setter Property="Foreground" Value="#2a99d4"/>
+                </DataTrigger>
+                <!-- Если Grade == 3 -->
+                <DataTrigger Binding="{Binding Grade}" Value="3">
+                    <Setter Property="Foreground" Value="#f5ce0c"/>
+                </DataTrigger>
+                <!-- Если Grade == 2 -->
+                <DataTrigger Binding="{Binding Grade}" Value="2">
+                    <Setter Property="Foreground" Value="#d42a2a"/>
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
+
         <Style x:Key="OGButton" TargetType="Button">
             <Setter Property="Width" Value="70"/>
             <Setter Property="Height" Value="30"/>
