@@ -15,12 +15,10 @@ using System.Windows.Shapes;
 
 namespace Practical
 {
-    /// <summary>
-    /// Логика взаимодействия для ResultsPage.xaml
-    /// </summary>
     public partial class ResultsPage : Page
     {
-        public ResultsPage()
+        private string _userRole;
+        public ResultsPage(string userRole)
         {
             InitializeComponent();
         }

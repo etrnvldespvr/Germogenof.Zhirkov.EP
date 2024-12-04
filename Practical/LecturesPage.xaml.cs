@@ -20,7 +20,8 @@ namespace Practical
     /// </summary>
     public partial class LecturesPage : Page
     {
-        public LecturesPage()
+        private string _userRole;
+        public LecturesPage(string userRole)
         {
             InitializeComponent();
             LoadData();

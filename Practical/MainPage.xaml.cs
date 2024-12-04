@@ -18,35 +18,37 @@ namespace Practical
     public partial class MainPage : Page
     {
         private int _userIdAuth;
-        public MainPage(int userIdAuth)
+        private string _userRole;
+        public MainPage(int userIdAuth, string userRole)
         {
             InitializeComponent();
             _userIdAuth = userIdAuth;
+            _userRole = userRole;
         }
 
         private void Courses_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new CoursesPage());
+            Manager.MainFrame.Navigate(new CoursesPage(_userRole));
         }
 
         private void Lectures_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new LecturesPage());
+            Manager.MainFrame.Navigate(new LecturesPage(_userRole));
         }
 
         private void Materials_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new MaterialsPage());
+            Manager.MainFrame.Navigate(new MaterialsPage(_userRole));
         }
 
         private void Tests_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new TestsPage());
+            Manager.MainFrame.Navigate(new TestsPage(_userRole));
         }
 
         private void Results_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new ResultsPage());
+            Manager.MainFrame.Navigate(new ResultsPage(_userRole));
         }
 
         private void PFP_Click(object sender, RoutedEventArgs e)

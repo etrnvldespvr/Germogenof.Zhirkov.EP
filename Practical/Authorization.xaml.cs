@@ -44,10 +44,10 @@ namespace Practical
                 switch (user.Role)
                 {
                     case "Teacher":
-                        //Manager.MainFrame.Navigate();
+                        Manager.MainFrame.Navigate(new MainPage(user.UserID, user.Role));
                         break;
                     case "Student":
-                        Manager.MainFrame.Navigate(new MainPage(user.UserID));
+                        Manager.MainFrame.Navigate(new MainPage(user.UserID, user.Role));
                         break;
                 }
             }

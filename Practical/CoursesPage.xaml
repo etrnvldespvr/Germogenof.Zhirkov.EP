@@ -44,6 +44,6 @@
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
-        <Button Name="BtnAdd" Grid.Row="0" Content="ADD" Margin="10" Style="{StaticResource OGButton}" HorizontalAlignment="Left" Visibility="Collapsed" Click="BtnAdd_Click"/>
+        <Button Name="BtnAdd" Grid.Row="0" Content="ADD" Margin="15,10,5,5" Style="{StaticResource OGButton}" HorizontalAlignment="Left" Visibility="Collapsed" Click="BtnAdd_Click"/>
     </Grid>
 </Page>

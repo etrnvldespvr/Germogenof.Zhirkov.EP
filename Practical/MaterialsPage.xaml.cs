@@ -15,12 +15,10 @@ using System.Windows.Shapes;
 
 namespace Practical
 {
-    /// <summary>
-    /// Логика взаимодействия для MaterialsPage.xaml
-    /// </summary>
     public partial class MaterialsPage : Page
     {
-        public MaterialsPage()
+        private string _userRole;
+        public MaterialsPage(string userRole)
         {
             InitializeComponent();
             LoadData();

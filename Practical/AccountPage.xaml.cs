@@ -18,6 +18,7 @@ namespace Practical
     public partial class AccountPage : Page
     {
         private int _userId;
+
         public AccountPage(int userId)
         {
             InitializeComponent();

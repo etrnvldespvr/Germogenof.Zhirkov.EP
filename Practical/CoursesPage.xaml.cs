@@ -17,10 +17,17 @@ namespace Practical
 {
     public partial class CoursesPage : Page
     {
-        public CoursesPage()
+        private string _userRole;
+        public CoursesPage(string userRole)
         {
             InitializeComponent();
+            _userRole = userRole;
             LoadData();
+            
+            if (userRole == "Teacher")
+            {
+                BtnAdd.Visibility = Visibility.Visible;
+            }
         }
 
         private void LoadData()
