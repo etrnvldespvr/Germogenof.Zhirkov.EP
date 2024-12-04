@@ -23,6 +23,33 @@ namespace Practical
         public LecturesPage()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            var context = EducationalEntities.GetContext();
+
+            var lecturesWithCourses = context.Lectures
+                .Join(
+                    context.Courses,
+                    lectures => lectures.CourseID,
+                    course => course.CourseID,
+                    (lectures, course) => new
+                    {
+                        lectures.Title,
+                        lectures.Description,
+                        CourseTitle = course.Title
+                    }
+                )
+                .ToList();
+
+            LViewCourses.ItemsSource = lecturesWithCourses;
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

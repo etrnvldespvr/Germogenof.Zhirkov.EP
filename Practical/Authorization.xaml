@@ -14,7 +14,7 @@
             <TextBox Name="LoginBox" Style="{StaticResource OGBox}" Margin="10,0,10,10"></TextBox>
             <TextBlock Style="{StaticResource OGText}" Text="Password" Margin="10,0,10,10" Width="325" FontWeight="Bold"></TextBlock>
             <PasswordBox Name="PasswordBox" Style="{StaticResource OGPass}" Margin="10,0,10,10"></PasswordBox>
-            <TextBlock Name="ErrorText" Visibility="Hidden" Style="{StaticResource OGText}" Foreground="Red" TextAlignment="Center" Margin="10,0,10,10" Text="Неправильные данные"></TextBlock>
+            <TextBlock Name="ErrorText" Visibility="Hidden" Style="{StaticResource OGText}" Foreground="Red" TextAlignment="Center" Margin="10,0,10,10" Text="Invalid data!"></TextBlock>
             <Button Name="LoginBtn" Click="LoginBtn_Click" Style="{StaticResource OGButton}" Content="SIGN IN" Width="80" Height="40" Margin="10,0,10,10"></Button>
         </StackPanel>
     </Grid>
