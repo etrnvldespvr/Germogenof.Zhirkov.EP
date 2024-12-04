@@ -13,7 +13,7 @@
             <RowDefinition Height="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <ListView Grid.Row="1" Name="LViewCourses">
+        <ListView Grid.Row="1" Name="LViewCourses" Background="Transparent" BorderBrush="Transparent" ScrollViewer.VerticalScrollBarVisibility="Disabled">
             <ListView.ItemContainerStyle>
                 <Style TargetType="ListViewItem">
                     <Setter Property="HorizontalContentAlignment" Value="Stretch" />

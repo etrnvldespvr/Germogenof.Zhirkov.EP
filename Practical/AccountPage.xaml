@@ -9,6 +9,64 @@
       Title="AccountPage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ListView Grid.Row="1" Name="LViewUsers" Background="Transparent" BorderBrush="Transparent" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="5" Height="auto">
+                        <Border BorderBrush="Black" BorderThickness="1">
+                            <StackPanel Margin="5">
+                                <WrapPanel>
+                                    <TextBlock Margin="5" FontSize="18" Style="{StaticResource OGText}">
+                                        <TextBlock.Text>
+                                            <MultiBinding StringFormat="{}{0} {1}">
+                                                <Binding Path="FirstName" />
+                                                <Binding Path="LastName" />
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                    <TextBlock Text="—" Margin="5" FontSize="18" Style="{StaticResource OGText}"/>
+                                    <TextBlock Text="{Binding Role}" Margin="5" FontSize="18" Style="{StaticResource OGText}"/>
+                                </WrapPanel>
+                                <TextBlock Text="{Binding Login}" Foreground="#4d4d4d" Margin="5,0,5,10" Style="{StaticResource OGText}"/>
+                                <TextBlock Text="{Binding ContactInfo}" Margin="5" Style="{StaticResource OGText}"/>
+                                <TextBlock Text="{Binding Email}" Margin="5" Style="{StaticResource OGText}"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <ListView Grid.Row="2" Name="LViewResults" Background="Transparent" BorderBrush="Transparent" ScrollViewer.VerticalScrollBarVisibility="Disabled">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="5" Height="Auto">
+                        <Border BorderBrush="Black" BorderThickness="1">
+                            <StackPanel Margin="5">
+                                <WrapPanel>
+                                    <TextBlock Text="{Binding CourseTitle}" Margin="5" FontSize="14" Foreground="#4d4d4d"/>
+                                    <TextBlock Text="{Binding Grade}" Margin="5" FontSize="14" Foreground="DarkBlue"/>
+                                </WrapPanel>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
     </Grid>
 </Page>

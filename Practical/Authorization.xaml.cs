@@ -26,7 +26,7 @@ namespace Practical
         {
             if ((string.IsNullOrEmpty(LoginBox.Text) || string.IsNullOrEmpty(PasswordBox.Password)))
             {
-                MessageBox.Show("Введите логин, пароль и капчу!");
+                MessageBox.Show("Enter data!");
                 return;
             }
             using (var db = new EducationalEntities())
@@ -47,7 +47,7 @@ namespace Practical
                         //Manager.MainFrame.Navigate();
                         break;
                     case "Student":
-                        Manager.MainFrame.Navigate(new MainPage());
+                        Manager.MainFrame.Navigate(new MainPage(user.UserID));
                         break;
                 }
             }

@@ -17,9 +17,11 @@ namespace Practical
 {
     public partial class MainPage : Page
     {
-        public MainPage()
+        private int _userIdAuth;
+        public MainPage(int userIdAuth)
         {
             InitializeComponent();
+            _userIdAuth = userIdAuth;
         }
 
         private void Courses_Click(object sender, RoutedEventArgs e)
@@ -49,7 +51,7 @@ namespace Practical
 
         private void PFP_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new AccountPage());
+            Manager.MainFrame.Navigate(new AccountPage(_userIdAuth));
         }
     }
 }
