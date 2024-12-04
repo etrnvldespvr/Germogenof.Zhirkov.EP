@@ -23,6 +23,33 @@ namespace Practical
         public MaterialsPage()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            var context = EducationalEntities.GetContext();
+
+            var materialsWithLectures = context.Materials
+                .Join(
+                    context.Lectures,
+                    material => material.LectureID,
+                    lecture => lecture.LectureID,
+                    (material, lecture) => new
+                    {
+                        material.Title,
+                        material.Type,
+                        material.FilePath,
+                        LectureTitle = lecture.Title
+                    }
+                )
+                .ToList();
+
+            LViewCourses.ItemsSource = materialsWithLectures;
+        }
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
