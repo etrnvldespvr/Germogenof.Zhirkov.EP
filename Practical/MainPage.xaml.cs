@@ -46,5 +46,10 @@ namespace Practical
         {
             Manager.MainFrame.Navigate(new ResultsPage());
         }
+
+        private void PFP_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new AccountPage());
+        }
     }
 }

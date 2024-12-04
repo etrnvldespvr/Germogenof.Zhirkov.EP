@@ -9,6 +9,12 @@
       Title="MainPage">
 
     <Grid>
+        <StackPanel HorizontalAlignment="Right" Margin="20">
+            <Button Style="{StaticResource ImageButtonStyle}" Click="PFP_Click">
+                <Image Source="Resources/placeholderone.png" Width="80"/>
+            </Button>
+            <TextBlock Style="{StaticResource OGText}" Text="Account" Margin="0,10,0,0" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"/>
+        </StackPanel>
         <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel>
                 <TextBlock Style="{StaticResource OGText}" Text="Courses" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"/>
@@ -26,7 +32,7 @@
                 <TextBlock Style="{StaticResource OGText}" Text="Tests" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"/>
                 <Button Style="{StaticResource OGButton}" Content="ENTER" Width="90" Margin="20" Click="Tests_Click"/>
             </StackPanel>
-            <StackPanel>
+            <StackPanel Visibility="Collapsed">
                 <TextBlock Style="{StaticResource OGText}" Text="Results" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"/>
                 <Button Style="{StaticResource OGButton}" Content="ENTER" Width="90" Margin="20" Click="Results_Click"/>
             </StackPanel>
