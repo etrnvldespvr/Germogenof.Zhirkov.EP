@@ -23,6 +23,32 @@ namespace Practical
         public TestsPage()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            var context = EducationalEntities.GetContext();
+
+            var testsWithLectures = context.Tests
+                .Join(
+                    context.Lectures,
+                    test => test.LectureID,
+                    lecture => lecture.LectureID,
+                    (test, lecture) => new
+                    {
+                        test.Title,
+                        test.Description,
+                        LectureTitle = lecture.Title
+                    }
+                )
+                .ToList();
+
+            LViewCourses.ItemsSource = testsWithLectures;
+        }
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
