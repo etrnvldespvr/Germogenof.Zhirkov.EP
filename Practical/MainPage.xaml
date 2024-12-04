@@ -12,23 +12,23 @@
         <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Center">
             <StackPanel>
                 <TextBlock Style="{StaticResource OGText}" Text="Courses" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"/>
-                <Button Style="{StaticResource OGButton}" Content="ENTER" Margin="15"/>
+                <Button Style="{StaticResource OGButton}" Content="ENTER" Margin="15" Click="Courses_Click"/>
             </StackPanel>
             <StackPanel>
                 <TextBlock Style="{StaticResource OGText}" Text="Lectures" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"/>
-                <Button Style="{StaticResource OGButton}" Content="ENTER" Margin="15"/>
+                <Button Style="{StaticResource OGButton}" Content="ENTER" Margin="15" Click="Lectures_Click"/>
             </StackPanel>
             <StackPanel>
                 <TextBlock Style="{StaticResource OGText}" Text="Mat-s" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"/>
-                <Button Style="{StaticResource OGButton}" Content="ENTER" Margin="15"/>
+                <Button Style="{StaticResource OGButton}" Content="ENTER" Margin="15" Click="Materials_Click"/>
             </StackPanel>
             <StackPanel>
                 <TextBlock Style="{StaticResource OGText}" Text="Tests" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"/>
-                <Button Style="{StaticResource OGButton}" Content="ENTER" Margin="15"/>
+                <Button Style="{StaticResource OGButton}" Content="ENTER" Margin="15" Click="Tests_Click"/>
             </StackPanel>
             <StackPanel>
                 <TextBlock Style="{StaticResource OGText}" Text="Results" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center"/>
-                <Button Style="{StaticResource OGButton}" Content="ENTER" Margin="15"/>
+                <Button Style="{StaticResource OGButton}" Content="ENTER" Margin="15" Click="Results_Click"/>
             </StackPanel>
         </WrapPanel>
     </Grid>

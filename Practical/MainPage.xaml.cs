@@ -15,14 +15,36 @@ using System.Windows.Shapes;
 
 namespace Practical
 {
-    /// <summary>
-    /// Логика взаимодействия для MainPage.xaml
-    /// </summary>
     public partial class MainPage : Page
     {
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void Courses_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new CoursesPage());
+        }
+
+        private void Lectures_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new LecturesPage());
+        }
+
+        private void Materials_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new MaterialsPage());
+        }
+
+        private void Tests_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new TestsPage());
+        }
+
+        private void Results_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new ResultsPage());
         }
     }
 }
