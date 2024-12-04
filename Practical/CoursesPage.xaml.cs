@@ -15,14 +15,41 @@ using System.Windows.Shapes;
 
 namespace Practical
 {
-    /// <summary>
-    /// Логика взаимодействия для CoursesPage.xaml
-    /// </summary>
     public partial class CoursesPage : Page
     {
         public CoursesPage()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            var context = EducationalEntities.GetContext();
+
+            var coursesWithTeachers = context.Courses
+                .Join(
+                    context.Users,
+                    course => course.TeacherID,
+                    user => user.UserID,
+                    (course, user) => new
+                    {
+                        course.Title,
+                        course.Category,
+                        course.Description,
+                        TeacherFirstName = user.FirstName,
+                        TeacherLastName = user.LastName
+                    }
+                )
+                .ToList();
+
+            LViewCourses.ItemsSource = coursesWithTeachers;
+        }
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
+

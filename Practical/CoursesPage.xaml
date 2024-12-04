@@ -9,6 +9,41 @@
       Title="CoursesPage">
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <ListView Grid.Row="1" Name="LViewCourses">
+            <ListView.ItemContainerStyle>
+                <Style TargetType="ListViewItem">
+                    <Setter Property="HorizontalContentAlignment" Value="Stretch" />
+                </Style>
+            </ListView.ItemContainerStyle>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="5" Height="auto">
+                        <Border BorderBrush="Black" BorderThickness="1">
+                            <StackPanel Margin="5">
+                                <WrapPanel>
+                                    <TextBlock Text="{Binding Title}" Margin="5" FontSize="18" Style="{StaticResource OGText}"/>
+                                    <TextBlock Text="—" Margin="5" FontSize="18" Style="{StaticResource OGText}"/>
+                                    <TextBlock Margin="5" FontSize="18" Style="{StaticResource OGText}">
+                                        <TextBlock.Text>
+                                            <MultiBinding StringFormat="{}{0} {1}">
+                                                <Binding Path="TeacherFirstName" />
+                                                <Binding Path="TeacherLastName" />
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
+                                </WrapPanel>
+                                <TextBlock Text="{Binding Category}" Foreground="#4d4d4d" Margin="5,0,5,10" Style="{StaticResource OGText}"/>
+                                <TextBlock Text="{Binding Description}" Margin="5" Style="{StaticResource OGText}"/>
+                            </StackPanel>
+                        </Border>
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Name="BtnAdd" Grid.Row="0" Content="ADD" Margin="10" Style="{StaticResource OGButton}" HorizontalAlignment="Left" Visibility="Collapsed" Click="BtnAdd_Click"/>
     </Grid>
 </Page>
