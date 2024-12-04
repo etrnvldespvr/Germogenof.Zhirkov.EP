@@ -55,8 +55,17 @@ namespace Practical
 
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-
+            Manager.MainFrame.Navigate(new AddEditPage());
         }
+
+        private void Courses_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+            if (Visibility == Visibility.Visible)
+            {
+                EducationalEntities.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                LViewCourses.ItemsSource = EducationalEntities.GetContext().Courses.ToList();
+            }
+    }
     }
 }
 

@@ -53,7 +53,7 @@ namespace Practical
 
         private void PFP_Click(object sender, RoutedEventArgs e)
         {
-            Manager.MainFrame.Navigate(new AccountPage(_userIdAuth));
+            Manager.MainFrame.Navigate(new AccountPage(_userIdAuth, _userRole));
         }
     }
 }

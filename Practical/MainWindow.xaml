@@ -19,6 +19,13 @@
         <Image Source="Resources/logoedudemic.png" Grid.Row="0" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="10"></Image>
         <TextBlock Style="{StaticResource OGText}" TextAlignment="Center" FontSize="40" FontWeight="Medium" VerticalAlignment="Center" HorizontalAlignment="Center" Text="EDUDEMIC" Foreground="White"></TextBlock>
         <Button Name="BtnBack" Click="BtnBack_Click" Style="{StaticResource OGButton}" HorizontalAlignment="Right" Margin="10" Content="BACK"></Button>
+        <WrapPanel HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Center">
+            <StackPanel>
+                <TextBlock Text="Germogen" Margin="10,5,5,0" Style="{StaticResource OGText}" Foreground="{StaticResource Secondary}" HorizontalAlignment="Right"/>
+                <TextBlock Text="Zhirk" Margin="10,0,5,5" Style="{StaticResource OGText}" Foreground="{StaticResource Secondary}" HorizontalAlignment="Right"/>
+            </StackPanel>
+            <TextBlock Text="off" Margin="5,5,5,5" FontWeight="Medium" FontSize="20" Style="{StaticResource OGText}" Foreground="{StaticResource Accent}" Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Left"/>
+        </WrapPanel>
 
         <Frame NavigationUIVisibility="Hidden" ContentRendered="MainFrame_ContentRendered" Name="MainFrame" Grid.Row="1"></Frame>
     </Grid>

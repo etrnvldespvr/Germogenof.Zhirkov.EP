@@ -18,13 +18,18 @@ namespace Practical
     public partial class AccountPage : Page
     {
         private int _userId;
+        private string _userRole;
 
-        public AccountPage(int userId)
+        public AccountPage(int userId, string userRole)
         {
             InitializeComponent();
             _userId = userId;
+            _userRole = userRole;
             LoadUserData();
-            LoadResultsData();
+            if (userRole != "Teacher")
+            {
+                LoadResultsData();
+            }
         }
         private void LoadUserData()
         {
